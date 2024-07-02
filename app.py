@@ -13,6 +13,7 @@ with st.sidebar:
 
     st.write('You selected:', option)
 
+
 csv = '''
 beverages,price
 orange juice,2.5
