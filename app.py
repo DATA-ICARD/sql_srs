@@ -3,6 +3,16 @@ import streamlit as st
 import pandas as pd
 import duckdb
 
+with st.sidebar:
+    option = st.selectbox(
+        "How would you like to review?",
+        ("Joins", "GroupBy", "Windows Functions"),
+        index=None,
+        placeholder="select a theme...",
+    )
+
+    st.write('You selected:', option)
+
 csv = '''
 beverages,price
 orange juice,2.5
