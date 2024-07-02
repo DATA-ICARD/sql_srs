@@ -7,16 +7,15 @@ st.write("""
 Spaced Repetition System SQL practice
 """)
 
-import streamlit as st
+with st.sidebar:
+    option = st.selectbox(
+        "How would you like to review?",
+        ("Joins", "GroupBy", "Windows Functions"),
+        index=None,
+        placeholder="select a theme...",
+    )
 
-option = st.selectbox(
-    "How would you like to review?",
-    ("Joins", "GroupBy", "Windows Functions"),
-    index=None,
-    placeholder="select a theme...",
-)
-
-st.write('You selected:', option)
+    st.write('You selected:', option)
 
 data = {"a": [1, 2, 3], "b": [4, 5, 6]}
 df = pd.DataFrame(data)
